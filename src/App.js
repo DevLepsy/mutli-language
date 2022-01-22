@@ -1,7 +1,15 @@
 import "./App.css";
+import Content from "./Components/Content/Content"
+import ToggleLangs from "./Components/ToggleLangs/ToggleLangs";
+import ContextProvider from "./context/langContext"
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <ContextProvider>
+    <ToggleLangs />
+    <Content />
+    </ContextProvider>
+  )
 }
 
 export default App;
